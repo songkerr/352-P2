@@ -9,7 +9,30 @@
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet">
     </head>
     <body>
+        <img src="img/favicon.png">
+        <p>REGISTER YOUR DOG</p>
         
+        <section>
+            <div class="info">
+<!--                <input type="text" placeholder="BREED">-->
+                <input type="text" placeholder="SIZE">
+<!--                <input type="text" placeholder="ACTIVITY LEVEL">-->
+            </div>
+        </section>
+        
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyAnxmmpmh0GLSR8TGbuY4ztaO3zkAFrnA8",
+            authDomain: "app-fd40f.firebaseapp.com",
+            databaseURL: "https://app-fd40f.firebaseio.com",
+            projectId: "app-fd40f",
+            storageBucket: "app-fd40f.appspot.com",
+            messagingSenderId: "870490121451"
+          };
+          firebase.initializeApp(config);
+        </script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
         <script src="js/script.js"></script>
