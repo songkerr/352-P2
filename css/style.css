@@ -23,11 +23,18 @@ p {
     color: #63D691;
 }
 
+p:nth-of-type(2) {
+    font-weight: 300;
+    margin-top: -2%;
+    font-size: 12px;
+}
+
 .info {
-    width: 60%;
+    width: 58%;
     text-align: center;
     margin: auto;
     margin-top: 10vh;
+    border-bottom: 1px solid #4F4F4F;
 }
 
 input[type="text"] {
@@ -35,6 +42,7 @@ input[type="text"] {
     font-weight: 300;
     text-align: center;
     color: #353535;
+    border: 0;
 }
 
 ::-webkit-input-placeholder {
@@ -44,4 +52,20 @@ input[type="text"] {
 
 input:focus {
     outline: none;
+}
+
+button {
+    display: block;
+    margin: auto;
+    margin-top: 20vh;
+    font-family: 'Josefin Sans', sans-serif;
+    background: linear-gradient(45deg, #32D2B9 , #93E44C);
+    color: #fff;
+    border-radius: 50px;
+    padding: 11px 22px 8px;
+}
+
+button:focus {
+    outline: none;
+    border: none;
 }
