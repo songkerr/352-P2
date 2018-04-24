@@ -13,11 +13,22 @@
         <p>REGISTER YOUR DOG</p>
         <p>you can add more later!</p>
         <section>
-            <div class="info">
-<!--                <input type="text" placeholder="BREED">-->
-                <input type="text" placeholder="SIZE" id="mainText">
-<!--                <input type="text" placeholder="ACTIVITY LEVEL">-->
-            </div>
+            <form>
+                <div class="info">
+<!--
+                    <div class="breed">
+                        <input id="breeds" placeholder="BREED">
+                    </div>
+-->
+                    <input list="sizes" placeholder="SIZE">
+                      <datalist id="sizes">
+                        <option value="Small">
+                        <option value="Medium">
+                        <option value="Large">
+                      </datalist>
+                </div>
+            </form>
+            
         </section>
         <button id="submitBtn" onclick="submitClick()">CONTINUE</button>
         
@@ -35,6 +46,7 @@
           firebase.initializeApp(config);
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>

@@ -30,27 +30,43 @@ p:nth-of-type(2) {
 }
 
 .info {
-    width: 58%;
+    display: flex;
+    flex-direction: column;
+    width: 64%;
     text-align: center;
     margin: auto;
-    margin-top: 10vh;
-    border-bottom: 1px solid #4F4F4F;
+    margin-top: 5vh;
 }
 
+input[list], #breeds {
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: #353535;
+    border: 0;
+    border-bottom: 1px solid #4F4F4F;
+    margin-top: 12%;
+}
+
+/*
 input[type="text"] {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     text-align: center;
     color: #353535;
     border: 0;
+    border-bottom: 1px solid #4F4F4F;
+    margin-top: 12%;
 }
+*/
 
 ::-webkit-input-placeholder {
     font-weight: 300;
     color: #BDBDBD; 
 }
 
-input:focus {
+input:focus{
     outline: none;
 }
 
