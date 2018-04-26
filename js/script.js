@@ -1,16 +1,16 @@
-$(document).ready(function () {
-    
-    var rootRef = firebase.database().ref().child("Tracks");
-    
-    rootRef.on("child_added", snap =>{
-        
-        var size = snap.child("Size").val();
-        
-        $("#sizeValue").append("<input list><datalist><option value=" + size + "></option></datalist></input>");
-        
-    });
-    
-});
+//$(document).ready(function () {
+//    
+//    var rootRef = firebase.database().ref().child("Tracks");
+//    
+//    rootRef.on("child_added", snap => {
+//        
+//        var size = snap.child("Size").val();
+//        
+//        $("#sizeValue").append("<input list><datalist><option value=" + size + "></option></datalist></input>");
+//        
+//    });
+//    
+//});
 //"<div>" + size + "</div>"
 
 
