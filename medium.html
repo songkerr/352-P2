@@ -9,37 +9,14 @@
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet">
     </head>
     <body>
-        <img src="img/favicon.png">
-        <p>REGISTER YOUR DOG</p>
-        <p>you can add more later!</p>
-        <section>
-            <form>
-                <div class="info">
-<!--
-                    <div class="breed">
-                        <input id="breeds" placeholder="BREED">
-                    </div>
--->
-<!--                    <input list="size" placeholder="SIZE">-->
-                      <select id="size">
-                          <option disabled="disabled" selected="selected">SIZE</option>
-                          <option value='small'>Small</option>
-                          <option value="medium">Medium</option>
-                          <option value="large">Large</option>
-                      </select>
-                </div>
-            </form>
-            
-        </section>
-        <input type="submit" value="CONTINUE" class="submitBtn" onclick="showPage()" >
         
-<!--
-        <div class="trackSelect">
-            <p id="track"></p>
-            <p id="track1"></p>
-            <p id="track2"></p>
-        </div>
--->
+        <h1>RECOMMENDED TRACKS</h1>
+        
+        <section class="results">
+            <div class="track">
+                <p id="track1"></p>
+            </div>
+        </section>
         
         <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
         <script>

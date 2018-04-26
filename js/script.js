@@ -1,19 +1,48 @@
 var rootRef = firebase.database().ref();
 var tracksRef = rootRef.child('Tracks');
-var sizeSelect = 'Default';
-
 
 tracksRef.orderByChild("Size").equalTo("Large").on("child_added", function (snapshot) {
     var newTrack = snapshot.val();
     console.log(newTrack.Size);
-    console.log(newTrack.Track);
-    document.getElementById("tracks").innerHTML = "Track name: " + newTrack.Track + "<br> Recommended dog size: " + newTrack.Size;
+//    console.log(newTrack.Track);
+    document.getElementById("track").innerHTML = "" + newTrack.Track + "";
+//    "<br> Recommended dog size: " + newTrack.Size;
 });
 
-$("select").change(function(){
-    if ($(this).val()=="") $(this).css({color: "#bdbdbd"});
-    else $(this).css({color: "#353535"});
+tracksRef.orderByChild("Size").equalTo("Medium").on("child_added", function (snapshot) {
+    var newTrack = snapshot.val();
+    console.log(newTrack.Size);
+    console.log(newTrack.Track);
+    document.getElementById("track1").innerHTML = "" + newTrack.Track + "<br> Recommended dog size: " + newTrack.Size;
 });
+
+tracksRef.orderByChild("Size").equalTo("Small").on("child_added", function (snapshot) {
+    var newTrack = snapshot.val();
+    console.log(newTrack.Size);
+    console.log(newTrack.Track);
+    document.getElementById("track2").innerHTML = "" + newTrack.Track + "<br> Recommended dog size: " + newTrack.Size;
+});
+
+function showPage() {
+    var sel = document.getElementById('size');
+    var option = sel.options[sel.selectedIndex].value;
+    window.location.replace(option + ".html");
+}
+
+//var size = {
+//    Large: {
+//        conferencePA: "5=Conference=Eastern",
+//    }       
+//    // more teams go here
+//}
+//
+//function chooseSize() {
+//    var ss = $('sizeSelect');
+//    var val = ss[ss.selectedIndex].value;
+//    console.log( sizes[val].conferencePA );
+//}
+//    
+//$('sizeSelect').addEvent( 'change', chooseSize );
 
 
 //$(document).ready(function () {
