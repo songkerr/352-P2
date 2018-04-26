@@ -1,3 +1,14 @@
+var rootRef = firebase.database().ref();
+var tracksRef = rootRef.child('Tracks');
+
+tracksRef.orderByChild("Size").equalTo("Large").on("child_added", function (snapshot) {
+    var newTrack = snapshot.val();
+    console.log(newTrack.Size);
+    console.log(newTrack.Track);
+    document.getElementById("tracks").innerHTML = "Track name: " + newTrack.Track + "<br> Recommended dog size: " + newTrack.Size;
+});
+
+
 //$(document).ready(function () {
 //    
 //    var rootRef = firebase.database().ref().child("Tracks");
