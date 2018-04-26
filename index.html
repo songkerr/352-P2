@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" href="img/favicon.png" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="style.css" />
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet">
     </head>
     <body>
@@ -20,12 +20,13 @@
                         <input id="breeds" placeholder="BREED">
                     </div>
 -->
-                    <input list="size" placeholder="SIZE">
-                      <datalist id="size">
-                        <option value="Small">
-                        <option value="Medium">
-                        <option value="Large">
-                      </datalist>
+<!--                    <input list="size" placeholder="SIZE">-->
+                      <select id="size">
+                          <option disabled="disabled" selected="selected">SIZE</option>
+                          <option value='Small'>Small</option>
+                          <option value="Medium">Medium</option>
+                          <option value="Large">Large</option>
+                      </select>
                 </div>
                 <div>
                     <p id="tracks"></p>

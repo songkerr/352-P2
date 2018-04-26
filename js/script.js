@@ -1,11 +1,18 @@
 var rootRef = firebase.database().ref();
 var tracksRef = rootRef.child('Tracks');
+var sizeSelect = 'Default';
+
 
 tracksRef.orderByChild("Size").equalTo("Large").on("child_added", function (snapshot) {
     var newTrack = snapshot.val();
     console.log(newTrack.Size);
     console.log(newTrack.Track);
     document.getElementById("tracks").innerHTML = "Track name: " + newTrack.Track + "<br> Recommended dog size: " + newTrack.Size;
+});
+
+$("select").change(function(){
+    if ($(this).val()=="") $(this).css({color: "#bdbdbd"});
+    else $(this).css({color: "#353535"});
 });
 
 
