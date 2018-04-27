@@ -13,13 +13,13 @@ img {
     display: block;
     margin: auto;
     height: 8vh;
-    margin-top: 8.5vh;
+    margin-top: 9vh;
 }
 
 p {
     text-align: center;
     font-weight: 400;
-    margin-top: 6vh;
+    margin-top: 5vh;
     color: #63D691;
 }
 
@@ -38,19 +38,57 @@ p:nth-of-type(2) {
     margin-top: 5vh;
 }
 
-#size {
+input[type="text"] {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: #353535;
+    border: 0;
+    border-bottom: 1px solid #4F4F4F;
+    margin-top: 12%;
+}
+
+input[list] {
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: #353535;
+    border: 0;
+    border-bottom: 1px solid #4F4F4F;
+    margin-top: 12%;
+    background-image: url("img/search.png");
+    background-size: 1.9vh;
+    background-position: 96% 50%;
+    background-repeat: no-repeat;
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+::-webkit-input-placeholder {
+    font-weight: 300;
+    color: #BDBDBD; 
+}
+
+input:focus{
+    outline: none;
+}
+
+#size, #fitness {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     text-align-last: center;
-    color: #bdbdbd;
+    color: #353535;
     border: none;
     background: #fff;
     border-radius: 0;
     -webkit-appearance: none;
     border-bottom: 1px solid #4F4F4F;
     background-image: url("img/dropdown.png");
-    background-size: 3%;
-    background-position: 98% 50%;
+    background-size: 1.6vh;
+    background-position: 96% 50%;
     background-repeat: no-repeat;
     margin-top: 12%;
 }
@@ -62,7 +100,7 @@ select:focus {
 input[type="submit"] {
     display: block;
     margin: auto;
-    margin-top: 20vh;
+    margin-top: 12vh;
     font-family: 'Josefin Sans', sans-serif;
     background: linear-gradient(45deg, #32D2B9 , #93E44C);
     color: #fff;
@@ -116,39 +154,5 @@ li {
     text-align: left;
     font-size: 14px;
     margin-left: 10px;
-}
-*/
-
-/*
-input[list] {
-    width: 100%;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 300;
-    text-align: center;
-    color: #353535;
-    border: 0;
-    border-bottom: 1px solid #4F4F4F;
-    margin-top: 12%;
-}
-*/
-
-/*
-input[type="text"] {
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 300;
-    text-align: center;
-    color: #353535;
-    border: 0;
-    border-bottom: 1px solid #4F4F4F;
-    margin-top: 12%;
-}
-
-::-webkit-input-placeholder {
-    font-weight: 300;
-    color: #BDBDBD; 
-}
-
-input:focus{
-    outline: none;
 }
 */
