@@ -12,15 +12,13 @@ tracksRef.orderByChild("Size").equalTo("Large").on("child_added", function (snap
 tracksRef.orderByChild("Size").equalTo("Medium").on("child_added", function (snapshot) {
     var newTrack = snapshot.val();
     console.log(newTrack.Size);
-    console.log(newTrack.Track);
-    document.getElementById("track1").innerHTML = "" + newTrack.Track + "<br> Recommended dog size: " + newTrack.Size;
+    $("#medResults").append("<ul><li>" + newTrack.Track + "</li></ul>");
 });
 
 tracksRef.orderByChild("Size").equalTo("Small").on("child_added", function (snapshot) {
     var newTrack = snapshot.val();
     console.log(newTrack.Size);
-    console.log(newTrack.Track);
-    document.getElementById("track2").innerHTML = "" + newTrack.Track + "<br> Recommended dog size: " + newTrack.Size;
+    $("#smlResults").append("<ul><li>" + newTrack.Track + "</li></ul>");
 });
 
 function showPage() {
