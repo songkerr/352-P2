@@ -4,21 +4,22 @@ var tracksRef = rootRef.child('Tracks');
 tracksRef.orderByChild("Size").equalTo("Large").on("child_added", function (snapshot) {
     var newTrack = snapshot.val();
     console.log(newTrack.Size);
+    $("#lrgResults").append("<div>" + newTrack.Track + "</div>");
 //    console.log(newTrack.Track);
-    document.getElementById("track").innerHTML = "" + newTrack.Track + "";
+//    document.getElementById("track").innerHTML = "" + newTrack.Track + "";
 //    "<br> Recommended dog size: " + newTrack.Size;
 });
 
 tracksRef.orderByChild("Size").equalTo("Medium").on("child_added", function (snapshot) {
     var newTrack = snapshot.val();
     console.log(newTrack.Size);
-    $("#medResults").append("<ul><li>" + newTrack.Track + "</li></ul>");
+    $("#medResults").append("<div>" + newTrack.Track + "</div>");
 });
 
 tracksRef.orderByChild("Size").equalTo("Small").on("child_added", function (snapshot) {
     var newTrack = snapshot.val();
     console.log(newTrack.Size);
-    $("#smlResults").append("<ul><li>" + newTrack.Track + "</li></ul>");
+    $("#smlResults").append("<div>" + newTrack.Track + "</div>");
 });
 
 function showPage() {
