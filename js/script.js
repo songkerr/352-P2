@@ -1,25 +1,30 @@
 var rootRef = firebase.database().ref();
 var tracksRef = rootRef.child('Tracks');
 
-tracksRef.orderByChild("Size").equalTo("Large").on("child_added", function (snapshot) {
+tracksRef.orderByChild("Size").equalTo("large").on("child_added", function (snapshot) {
     var newTrack = snapshot.val();
+    console.log(newTrack.Track);
+    console.log(newTrack.Distance);
+    console.log(newTrack.Time);
     console.log(newTrack.Size);
-    $("#lrgResults").append("<div>" + newTrack.Track + "</div>");
-//    console.log(newTrack.Track);
-//    document.getElementById("track").innerHTML = "" + newTrack.Track + "";
-//    "<br> Recommended dog size: " + newTrack.Size;
+    console.log(newTrack.Fitness);
+    $("#lrgResults").append("<div>" + newTrack.Track + "<br><br> Distance: " + newTrack.Distance + "<br> Time: Approximately " + newTrack.Time + "<br> Suitable for " + newTrack.Size + " dogs of " + newTrack.Fitness + " fitness </div>");
 });
 
-tracksRef.orderByChild("Size").equalTo("Medium").on("child_added", function (snapshot) {
+tracksRef.orderByChild("Size").equalTo("medium").on("child_added", function (snapshot) {
     var newTrack = snapshot.val();
-    console.log(newTrack.Size);
-    $("#medResults").append("<div>" + newTrack.Track + "</div>");
+    console.log(newTrack.Track);
+    console.log(newTrack.Distance);
+    console.log(newTrack.Time);
+    $("#medResults").append("<div>" + newTrack.Track + "<br><br> Distance: " + newTrack.Distance + "<br> Time: Approximately " + newTrack.Time + "<br> Suitable for " + newTrack.Size + " dogs of " + newTrack.Fitness + " fitness </div>");
 });
 
-tracksRef.orderByChild("Size").equalTo("Small").on("child_added", function (snapshot) {
+tracksRef.orderByChild("Size").equalTo("small").on("child_added", function (snapshot) {
     var newTrack = snapshot.val();
-    console.log(newTrack.Size);
-    $("#smlResults").append("<div>" + newTrack.Track + "</div>");
+    console.log(newTrack.Track);
+    console.log(newTrack.Distance);
+    console.log(newTrack.Time);
+    $("#smlResults").append("<div>" + newTrack.Track + "<br><br> Distance: " + newTrack.Distance + "<br> Time: Approximately " + newTrack.Time + "<br> Suitable for " + newTrack.Size + " dogs of " + newTrack.Fitness + " fitness </div>");
 });
 
 function showPage() {
