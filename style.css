@@ -119,7 +119,7 @@ h1 {
     font-weight: 400;
     width: 75%;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 5vh;
 }
 
 #smlResults, #medResults, #lrgResults {
@@ -136,6 +136,13 @@ h1 {
     padding: 8% 2% 8% 6%;
     border-radius: 14px;
     margin-top: 4vh;
+}
+
+#map {
+    height: 50vh;
+    width: 70%;
+    margin: auto;
+    margin-top: 5vh;
 }
 
 footer {
