@@ -9,7 +9,7 @@ body {
     width: 100%;
 }
 
-img {
+.logo {
     display: block;
     margin: auto;
     height: 8vh;
@@ -146,7 +146,7 @@ h1 {
 }
 
 footer {
-    display: inline-flex;
+    display: flex;
     background: #fff;
     height: 20vh;
     position: fixed;
@@ -156,10 +156,18 @@ footer {
     background-attachment: scroll;
 }
 
-footer > img {
-    height: 6vh;
+footer > div {
+    margin: auto;
 }
 
+footer > div > img {
+    margin: 0;
+    height: 4.5vh;
+}
+
+#paws {
+    height: 5.5vh;
+}
 /*
 .track {
     width: 80%;
