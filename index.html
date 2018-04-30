@@ -12,44 +12,40 @@
         <img class="logo" src="img/favicon.png">
         <p>REGISTER YOUR DOG</p>
         <p>you can add more later!</p>
-        <section>
-            <form>
-                <div class="info">
-                    <input type="text" placeholder="NAME">
-                    <input type="text" placeholder="AGE">
-                    <input list="breeds" placeholder="BREED">
-                        <datalist id="breeds">
-                            <option value="Akita">
-                            <option value="Beagle">
-                            <option value="Chihuahua">
-                            <option value="Dachshund">
-                            <option value="English Bulldog">
-                            <option value="French Bulldog">
-                            <option value="German Shepherd">
-                            <option value="Husky">
-                            <option value="Japanese Spitz">
-                            <option value="Maltese">
-                            <option value="Pomeranian">
-                            <option value="Samoyed">
-                            <option value="Tibetan Mastiff">
-                            <option value="Yorkshire Terrier">
-                        </datalist>
-                    <select id="size">
-                        <option disabled="disabled" selected="selected">SIZE</option>
-                        <option value='small'>Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
-                    </select>
-                    <select id="fitness">
-                        <option disabled="disabled" selected="selected">ACTIVITY LEVEL</option>
-                        <option value='small'>Active</option>
-                        <option value="medium">Intermediate</option>
-                        <option value="large">Low</option>
-                    </select>
-                </div>
-            </form> 
-        </section>
-        <input type="submit" value="CONTINUE" class="submitBtn" onclick="showPage()" >
+        <form id="info">
+            <input type="text" id="dogName" placeholder="NAME">
+            <input type="text" placeholder="AGE">
+            <input list="breeds" placeholder="BREED">
+                <datalist id="breeds">
+                    <option value="Akita">
+                    <option value="Beagle">
+                    <option value="Chihuahua">
+                    <option value="Dachshund">
+                    <option value="English Bulldog">
+                    <option value="French Bulldog">
+                    <option value="German Shepherd">
+                    <option value="Husky">
+                    <option value="Japanese Spitz">
+                    <option value="Maltese">
+                    <option value="Pomeranian">
+                    <option value="Samoyed">
+                    <option value="Tibetan Mastiff">
+                    <option value="Yorkshire Terrier">
+                </datalist>
+            <select id="size">
+                <option disabled="disabled" selected="selected">SIZE</option>
+                <option value='small'>Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+            <select id="fitness">
+                <option disabled="disabled" selected="selected">ACTIVITY LEVEL</option>
+                <option value='small'>Active</option>
+                <option value="medium">Intermediate</option>
+                <option value="large">Low</option>
+            </select>
+        </form> 
+        <input type="submit" value="CONTINUE" id="submitBtn" onclick="showPage()">
         <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
         <script src="js/script.js"></script>

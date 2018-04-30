@@ -12,14 +12,14 @@ body {
 .logo {
     display: block;
     margin: auto;
-    height: 8vh;
+    height: 9vh;
     margin-top: 9vh;
 }
 
 p {
     text-align: center;
     font-weight: 400;
-    margin-top: 5vh;
+    margin-top: 4vh;
     color: #63D691;
 }
 
@@ -29,13 +29,13 @@ p:nth-of-type(2) {
     font-size: 12px;
 }
 
-.info {
+#info {
     display: flex;
     flex-direction: column;
     width: 64%;
     text-align: center;
     margin: auto;
-    margin-top: 5vh;
+    margin-top: 6vh;
 }
 
 input[type="text"] {
