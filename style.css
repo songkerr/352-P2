@@ -153,8 +153,22 @@ a {
     height: 50%;
 }
 
-#rating > h5 {
-    padding: 4vh 0px 1vh;
+#rating {
+    display: flex;
+    justify-content: flex-start;
+    width: 65%;
+    margin: auto;
+    margin-top: 4vh;
+}
+
+#rating > div > h5 {
+    margin: 0;
+    margin-top: 10%;
+}
+
+#stars {
+    margin-left: 10%;
+    height: 18px;
 }
 
 #description {
@@ -171,7 +185,7 @@ a {
     font-size: 12px;
 }
 
-h5 {
+#description > h5 {
     width: 65%;
     margin: auto;
     padding: 4vh 0px 1.4vh;
