@@ -129,7 +129,7 @@ h1 {
 #smlResults, #medResults, #lrgResults {
     width: 75%;
     margin: auto;
-    margin-top: 6vh;
+    margin-top: 5vh;
     margin-bottom: 12vh;
 }
 
@@ -142,10 +142,15 @@ h1 {
     margin-top: 4vh;
 }
 
+a {
+    text-decoration: none;
+}
+
 #map_canvas {
-    float:left;
-    width:70%;
-    height:100%;
+    margin: auto;
+    margin-top: 5vh;
+    width: 60%;
+    height: 50%;
 }
 
 footer {
