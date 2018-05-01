@@ -1,40 +1,40 @@
-var directionDisplay;
-            var directionsService = new google.maps.DirectionsService();
-            var map;
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 6
+        });
+        infoWindow = new google.maps.InfoWindow;
 
-            function initMap() {
-                directionsDisplay = new google.maps.DirectionsRenderer();
-                var myOptions = {
-                    zoom: 15,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP,
-                    center: {lat: -41.298453, lng: 174.756764}
-                };
-                map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-                directionsDisplay.setMap(map);
-                calcRoute();
-            }
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
 
-            function calcRoute() {
-                var first = new google.maps.LatLng(-41.297103, 174.761544);
-                var second = new google.maps.LatLng(-41.303875, 174.753651);
-                var third = new google.maps.LatLng(-41.301176, 174.757032);
-                var fourth = new google.maps.LatLng(-41.297042, 174.751560);
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
 
-                var request = {
-                    origin: "-41.293893, 174.761256",
-                    destination: "-41.293756, 174.761237",
-                    waypoints: [{location: first, stopover: true},
-                                {location: second, stopover: true},
-                               {location: third, stopover: true},
-                               {location: fourth, stopover: true}],
-                    optimizeWaypoints: true,
-                    travelMode: google.maps.DirectionsTravelMode.WALKING
-                };
-                directionsService.route(request, function (response, status) {
-                    if (status == google.maps.DirectionsStatus.OK) {
-                        directionsDisplay.setDirections(response);
-                    } else {
-                        alert("directions response " + status);
-                    }
-                });
-            }
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }

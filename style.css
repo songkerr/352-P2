@@ -146,13 +146,36 @@ a {
     text-decoration: none;
 }
 
-#map_canvas {
+#map {
     margin: auto;
     margin-top: 5vh;
-    width: 60%;
+    width: 65%;
     height: 50%;
 }
 
+#rating > h5 {
+    padding: 4vh 0px 1vh;
+}
+
+#description {
+    margin-bottom: 14vh;
+}
+
+.description {
+    width: 65%;
+    margin: auto;
+    margin-top: 2vh;
+    color: #353535;
+    text-align: left;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+h5 {
+    width: 65%;
+    margin: auto;
+    padding: 4vh 0px 1.4vh;
+}
 footer {
     display: flex;
     background: #fff;
