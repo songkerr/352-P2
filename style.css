@@ -8,9 +8,12 @@ html {
 
 body {
     width: 100%;
-    height: 100%; 
     margin: 0px; 
     padding: 0px
+}
+
+#mapindex {
+    height: 100%;
 }
 
 .logo {
@@ -130,7 +133,7 @@ h1 {
     width: 75%;
     margin: auto;
     margin-top: 5vh;
-    margin-bottom: 12vh;
+    margin-bottom: 8vh;
 }
 
 #smlResults > div, #medResults > div, #lrgResults > div {
