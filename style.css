@@ -133,7 +133,7 @@ h1 {
     width: 75%;
     margin: auto;
     margin-top: 5vh;
-    margin-bottom: 8vh;
+    padding-bottom: 16vh;
 }
 
 #smlResults > div, #medResults > div, #lrgResults > div {
